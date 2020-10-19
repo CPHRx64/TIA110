@@ -69,4 +69,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#000"/>
+
+    <!--TextView: from location-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/geo_source"
+        android:hint="Enter source location"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/geo_destination"
+        android:hint="Enter destination"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/editbox_background"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/geo_distance"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"/>
+    
 </LinearLayout>
