@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     private var lat1 : Double = 0.0
     private var long1 : Double = 0.0
     private var flag : Int = 0;
+    private val api_key : String = ""
 
 
     //bluetooth adapter
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //init google places:
-        Places.initialize(applicationContext, "AIzaSyD7su_-5oHGyppir4oCcwG3jUFPMjVshMw")
+        Places.initialize(applicationContext, api_key)
 
         // non focusable edit text
         geo_source.isFocusable = false
