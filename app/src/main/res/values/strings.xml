@@ -9,4 +9,8 @@
     <string name="the_current_lock_status">The current lock status</string>
     <string name="battery_status">Battery status</string>
     <string name="bluetooth_connection_status">Bluetooth connection status</string>
+    <string name="route">Route</string>
+    <string name="time_to">Time to</string>
+    <string name="vehicle_gps_connected">Vehicle GPS connected</string>
+    <string name="time">5 min</string>
 </resources>

@@ -38,6 +38,8 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <TextView
+        android:layout_marginTop="40dp"
+        android:padding="4dp"
         android:id="@+id/lockTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,17 +51,19 @@
 
     <TextView
         android:id="@+id/lockId"
+        android:padding="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Lock_Id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@id/lockTitle"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+       app:layout_constraintTop_toTopOf="@id/lockTitle" />
 
 
     <TextView
         android:id="@+id/lockAddress"
+        android:layout_marginTop="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lock_address"
@@ -69,21 +73,21 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/LockCard"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lockAddress">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/LockStatusBar"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
+            android:padding="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
-            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -93,7 +97,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/status"
-                app:layout_constraintEnd_toStartOf="@id/LockCardStatus"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -103,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/current_lock_status"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/LockCardTitle"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -111,6 +114,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 app:srcCompat="@drawable/ic_bluetooth_on"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/LockBatteryStatus"
                 android:contentDescription="@string/bluetooth_connection_status" />
 
             <ImageView
@@ -118,14 +123,16 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 app:srcCompat="@drawable/common_full_open_on_phone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:contentDescription="@string/battery_status" />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
             android:id="@+id/LockStatusLight"
             android:layout_width="0dp"
-            android:layout_height="5dp"
+            android:layout_height="20dp"
             android:background="@color/colorPrimaryDark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -143,6 +150,120 @@
             app:layout_constraintTop_toBottomOf="@id/LockStatusLight"
             app:srcCompat="@drawable/ic_launcher_foreground" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/DistanceCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LockCard"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/RouteStatusBar"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <TextView
+                    android:id="@+id/RouteTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/route"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/GpsStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vehicle_gps_connected"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/RouteTitle" />
+
+                <TextView
+                    android:id="@+id/timeToNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                  />
+
+                <TextView
+                    android:id="@+id/timeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_to"
+                    app:layout_constraintEnd_toStartOf="@id/timeLockIcon"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/timeLockIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:layout_constraintEnd_toStartOf="@id/timeToNext"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/common_full_open_on_phone"
+                    android:contentDescription="@string/battery_status" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- The srcCompat image is transparent and colors are set in border.xml -->
+            <ImageView
+                android:id="@+id/Hospital"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/border"
+                android:layout_margin="4dp"
+                android:contentDescription="@string/the_current_lock_status"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/RouteStatusBar"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+            <ImageView
+                android:id="@+id/Ambulance"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/border"
+                android:layout_margin="4dp"
+                android:contentDescription="@string/the_current_lock_status"
+                app:layout_constraintStart_toEndOf="@id/Hospital"
+                app:layout_constraintTop_toBottomOf="@id/RouteStatusBar"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+            <ImageView
+                android:id="@+id/SmallLock"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/border"
+                android:layout_margin="4dp"
+                android:contentDescription="@string/the_current_lock_status"
+                app:layout_constraintStart_toEndOf="@id/Ambulance"
+                app:layout_constraintTop_toBottomOf="@id/RouteStatusBar"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageView
+                android:id="@+id/Accident"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/border"
+                android:layout_margin="4dp"
+                android:contentDescription="@string/the_current_lock_status"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/RouteStatusBar"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
