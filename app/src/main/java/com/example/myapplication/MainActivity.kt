@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val api_key: String = "AIzaSyDjBRFvOLIoHr36PvC7dcMGEkFn2bCwqRU"
+    private val api_key: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
