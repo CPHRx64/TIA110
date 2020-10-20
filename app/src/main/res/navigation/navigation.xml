@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/blueToothFragment">
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.myapplication.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard"/>
+    <fragment
+        android:id="@+id/blueToothFragment"
+        android:name="com.example.myapplication.BlueToothFragment"
+        android:label="BlueToothFragment"
+        tools:layout="@layout/fragment_bluetooth">
+        <action
+            android:id="@+id/action_blueToothFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+</navigation>

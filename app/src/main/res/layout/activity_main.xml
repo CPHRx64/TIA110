@@ -1,100 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    tools:context=".MainActivity">
 
-    <!--TextView: Display if bluetooth is available-->
-    <TextView
-        android:id="@+id/bluetoothStatusTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:padding="5dp"
-        android:textAlignment="center"
-        android:textColor="#000"
-        android:textSize="20sp"/>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!--ImageView: Bluetooth on/off icon-->
-    <ImageView
-        android:id="@+id/bluetoothStatusIv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_bluetooth_off"/>
-
-    <!--Button: turn on bt-->
-    <Button
-        android:id="@+id/turnOnBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:text="Turn On"
-        android:minWidth="200dp"/>
-
-    <!--Button: turn off bt-->
-    <Button
-        android:id="@+id/turnOffBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:text="Turn Off"
-        android:minWidth="200dp"/>
-
-    <!--Button: make bt dusciverable-->
-    <Button
-        android:id="@+id/discoverableBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:text="Discoverble"
-        android:minWidth="200dp"/>
-
-    <!--Button: get list of paired devices-->
-    <Button
-        android:id="@+id/pairedBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:text="Discoverble"
-        android:minWidth="200dp"/>
-
-    <!--Button: show list of paired devices-->
-    <TextView
-        android:id="@+id/pairedTv"
-        android:padding="5dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#000"/>
-
-    <!--TextView: from location-->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/geo_source"
-        android:hint="Enter source location"
-        android:padding="12dp"
-        android:background="@android:drawable/editbox_background"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/geo_destination"
-        android:hint="Enter destination"
-        android:padding="12dp"
-        android:layout_marginTop="8dp"
-        android:background="@android:drawable/editbox_background"/>
-
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/geo_distance"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorAccent"
-        android:gravity="center"/>
+        android:orientation="vertical">
 
-</LinearLayout>
+        <fragment
+            android:id="@+id/myNavHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/navigation" />
+    </LinearLayout>
+</layout>

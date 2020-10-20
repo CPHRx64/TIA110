@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="lock_title">Lock</string>
+    <string name="button">Button</string>
+    <string name="Lock_Id">TWR455</string>
+    <string name="lock_address">Björnskärsvägen 48</string>
+    <string name="status">Status</string>
+    <string name="current_lock_status">Unlocked</string>
+    <string name="the_current_lock_status">The current lock status</string>
+    <string name="battery_status">Battery status</string>
+    <string name="bluetooth_connection_status">Bluetooth connection status</string>
 </resources>
