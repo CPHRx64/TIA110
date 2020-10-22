@@ -14,4 +14,4 @@ WHERE TO PUT THE API KEY
 TO RUN THE CODE
 1. Clone the repo
 2. Open with Android Studio
-3. Complile MainActvity.kt to run the application.
+3. Complile MainActvity.kt to run the application on a physical android device.
