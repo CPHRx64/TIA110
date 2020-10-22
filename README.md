@@ -8,7 +8,7 @@ a prototype application for digitally unlocking fences in a residential complex.
   
 ---------------------------------------------------------------------------------------------------------------------------------------  
 WHERE TO PUT THE API KEY
-In the file MainActivity.kt, go to line 16 and replace the empty string called "api_key" with the API key.
+- In the file MainActivity.kt, go to line 16 and replace the empty string called "api_key" with the API key.
 
 ---------------------------------------------------------------------------------------------------------------------------------------  
 TO RUN THE CODE
