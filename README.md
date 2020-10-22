@@ -1,10 +1,12 @@
 # TIA110
-a prototype application for digitally unlocking fences in a residential complex. This is a part of course project. Read more by clicking on this link: https://kevinbrunstrom.se/responder-lock/
+a prototype application for digitally unlocking fences in a residential complex.
 ---------------------------------------------------------------------------------------------------------------------------------------  
 ###IMPORTANT###
 1. The applicaiton uses bluetooth and unfortunately the emulator doesn't support that so it only runs on real physical android devices.
 
 2. We use a paid API key for the application and will attach the api key in the submission to avoid leaking it to the internet.
+
+3. This is a part of course project. Read more by clicking on this link: https://kevinbrunstrom.se/responder-lock/
   
 ---------------------------------------------------------------------------------------------------------------------------------------  
 WHERE TO PUT THE API KEY
